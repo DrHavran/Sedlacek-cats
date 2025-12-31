@@ -2,8 +2,6 @@ let month = 12;
 let year = 2025;
 let days = {};
 
-days["25.12.2025"] = {marekGif: "https://media.tenor.com/_WZy7E7hoTcAAAAM/cat-smile.gif", marekTime: "3:30", sedlakGif: "CAT2", sedlakTime: "10:00"}
-
 window.onload = function () {
     loadFile();
     let calendar = document.getElementById("calendar")
