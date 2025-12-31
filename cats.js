@@ -45,14 +45,16 @@ function loadFile(){
         .then(text => {
             let lines = text.split(";");
             for (let line of lines) {
+                line = line.trim();
                 let parts = line.split(" ");
+                
                 let date = parts[0];
                 let mGif = parts[1];
                 let mTime = parts[2]
                 let sGif = parts[3];
                 let sTime = parts[4];
 
-                console.log(date)
+                days[date] = {marekGif: mGif, marekTime: mTime, sedlakGif: sGif, sedlakTime: sTime}
             }
   });
 }
