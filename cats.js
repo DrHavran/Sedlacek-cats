@@ -40,9 +40,19 @@ window.onload = function () {
 };
 
 function loadFile(){
-    fetch("https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/main/cats.txt")
+    fetch("https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/cats.txt")
         .then(r => r.text())
         .then(text => {
-             console.log(text);
+            let lines = text.split(";");
+            for (let line of lines) {
+                let parts = line.split(" ");
+                let date = parts[0];
+                let mGif = parts[1];
+                let mTime = parts[2]
+                let sGif = parts[3];
+                let sTime = parts[4];
+
+                console.log(date)
+            }
   });
 }
