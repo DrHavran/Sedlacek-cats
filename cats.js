@@ -27,8 +27,17 @@ window.onload = function () {
         div.addEventListener("click", function(){
             let day = i+"."+month+"."+year
             
-            marekGif.src = days[day]["marekGif"]
-            sedlakGif.src = days[day]["sedlakGif"]
+            if(days[day]["marekGif"] == "null"){
+                marekGif.src = "https://freepngimg.com/thumb/red_cross_mark/3-2-red-cross-mark-png-thumb.png"
+            }else{
+                marekGif.src = days[day]["marekGif"]
+            }
+
+            if(days[day]["sedlakGif"] == "null"){
+                sedlakGif.src = "https://freepngimg.com/thumb/red_cross_mark/3-2-red-cross-mark-png-thumb.png"
+            }else{
+               sedlakGif.src = days[day]["sedlakGif"]
+            }
         })
 
         let number = document.createElement("p")
@@ -47,7 +56,7 @@ function loadFile(){
             for (let line of lines) {
                 line = line.trim();
                 let parts = line.split(" ");
-                
+
                 let date = parts[0];
                 let mGif = parts[1];
                 let mTime = parts[2]
