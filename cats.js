@@ -42,9 +42,9 @@ window.onload = function () {
 };
 
 function loadFile(){
-    fetch("cats.txt")
+    fetch("https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/main/cats.txt")
         .then(r => r.text())
         .then(text => {
-            console.log(text);
-    });
+             console.log(text);
+  });
 }
