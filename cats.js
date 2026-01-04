@@ -1,5 +1,5 @@
-let month = 12;
-let year = 2025;
+let month = 1;
+let year = 2026;
 let days = {};
 loadFile();
 
@@ -26,6 +26,9 @@ window.onload = function () {
 
         div.addEventListener("click", function(){
             let day = i+"."+month+"."+year
+
+            marekGif.src = ""
+            sedlakGif.src = ""
             
             if(days[day]["marekGif"] == "null"){
                 marekGif.src = "https://freepngimg.com/thumb/red_cross_mark/3-2-red-cross-mark-png-thumb.png"
