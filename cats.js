@@ -1,9 +1,9 @@
 let month = 12;
 let year = 2025;
 let days = {};
+loadFile();
 
 window.onload = function () {
-    loadFile();
     let calendar = document.getElementById("calendar")
     let marekGif = document.getElementById("marekGif")
     let sedlakGif = document.getElementById("sedlakGif")
