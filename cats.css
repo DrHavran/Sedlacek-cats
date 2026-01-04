@@ -1,13 +1,44 @@
 body{
     background-color: black;
+    color: white;
+    height: 90vh;
+    margin: 0px;
+    font-weight: bold;
+}
+
+button{
+    background-color: transparent;
+}
+
+.middle{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow:hover{
+    filter: brightness(70%);
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transform: rotateY(180deg);
 }
 
 #calendar{
-    background-color: gray;
+    color: black;
     height: fit-content;
     width: 714px;
 
@@ -15,11 +46,21 @@ body{
     flex-wrap: wrap;
 }
 
+.days{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .day{
     background-color: blanchedalmond;
     height: 130px;
     width: 100px;
     border: black 1px solid;
+}
+
+.day:hover{
+    background-color: rgb(243, 211, 163);
 }
 
 .emptyDay{

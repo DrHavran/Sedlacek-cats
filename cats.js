@@ -1,13 +1,101 @@
-let month = 1;
-let year = 2026;
+let date = new Date();  
+let month = date.getMonth() + 1;;
+let year = date.getFullYear();
 let days = {};
-loadFile();
 
 window.onload = function () {
     let calendar = document.getElementById("calendar")
+    let currentDate = document.getElementById("currentDate")
     let marekGif = document.getElementById("marekGif")
     let sedlakGif = document.getElementById("sedlakGif")
+    let marekTime = document.getElementById("marekTime")
+    let sedlakTime = document.getElementById("sedlakTime")
+    loadFile();
+    currentDate.innerHTML = getMonthName(month) + " " + year
+    loadCalendar();
+};
 
+
+let monthNames = [
+    "Leden", "Únor", "Březen", "Duben", "Květen", "Červen",
+    "Červenec", "Srpen", "Září", "Říjen", "Listopad", "Prosinec"
+];
+  
+function getMonthName(monthNumber) {
+    return monthNames[monthNumber - 1];
+}
+
+function left(){
+    month--
+    if(month == 0){
+        month = 12
+        year--
+    }
+    currentDate.innerHTML = getMonthName(month) + " " + year
+    calendar.innerHTML = ""
+    loadCalendar();
+}
+
+function right(){
+    month++
+    if(month == 13){
+        month = 1
+        year++
+    }
+    currentDate.innerHTML = getMonthName(month) + " " + year
+    calendar.innerHTML = ""
+    loadCalendar();
+}
+
+function loadFile(){
+    let currentStreak = 0;
+    let longestStreak = 0;
+    let currentText = document.getElementById("currentStreak")
+    let longestText = document.getElementById("longestStreak")
+
+    fetch("https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/cats.txt")
+        .then(r => r.text())
+        .then(text => {
+            let lines = text.split(";");
+            for (let line of lines) {
+                currentStreak++
+                line = line.trim();
+                let parts = line.split(" ");
+
+                let date = parts[0];
+                let mGif = parts[1];
+                let mTime = parts[2]
+                let sGif = parts[3];
+                let sTime = parts[4];
+
+                if(mGif == "null" || sGif == "null"){
+                    if(longestStreak < currentStreak - 1){
+                        longestStreak = currentStreak - 1;
+                    }
+                    currentStreak = 0;
+
+                    if(mGif == "null"){
+                        mGif = "https://static.vecteezy.com/system/resources/thumbnails/024/382/893/small/empty-no-forbidden-prohibition-sign-icon-symbol-free-png.png"
+                        mTime = ""
+                    }
+                    if(sGif == "null"){
+                        sGif = "https://static.vecteezy.com/system/resources/thumbnails/024/382/893/small/empty-no-forbidden-prohibition-sign-icon-symbol-free-png.png"
+                        sTime = ""
+                    }
+                }
+                
+                days[date] = {marekGif: mGif, marekTime: mTime, sedlakGif: sGif, sedlakTime: sTime}
+            }
+
+            if(longestStreak < currentStreak){
+                longestStreak = currentStreak;
+            }
+            currentText.innerHTML = "Current streak: " + currentStreak;
+            longestText.innerHTML = "Longest streak: " + longestStreak;
+  });
+}
+
+function loadCalendar(){
     let emptyDays = new Date(year, month-1, 1).getDay()
     if(emptyDays == 0){
         emptyDays = 7;
@@ -29,18 +117,13 @@ window.onload = function () {
 
             marekGif.src = ""
             sedlakGif.src = ""
+            marekTime.innerHTML = ""
+            sedlakTime.innerHTML = ""
             
-            if(days[day]["marekGif"] == "null"){
-                marekGif.src = "https://freepngimg.com/thumb/red_cross_mark/3-2-red-cross-mark-png-thumb.png"
-            }else{
-                marekGif.src = days[day]["marekGif"]
-            }
-
-            if(days[day]["sedlakGif"] == "null"){
-                sedlakGif.src = "https://freepngimg.com/thumb/red_cross_mark/3-2-red-cross-mark-png-thumb.png"
-            }else{
-               sedlakGif.src = days[day]["sedlakGif"]
-            }
+            marekGif.src = days[day]["marekGif"]
+            sedlakGif.src = days[day]["sedlakGif"]
+            marekTime.innerHTML = days[day]["marekTime"]
+            sedlakTime.innerHTML = days[day]["sedlakTime"]
         })
 
         let number = document.createElement("p")
@@ -49,24 +132,4 @@ window.onload = function () {
 
         calendar.appendChild(div)
     }
-};
-
-function loadFile(){
-    fetch("https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/cats.txt")
-        .then(r => r.text())
-        .then(text => {
-            let lines = text.split(";");
-            for (let line of lines) {
-                line = line.trim();
-                let parts = line.split(" ");
-
-                let date = parts[0];
-                let mGif = parts[1];
-                let mTime = parts[2]
-                let sGif = parts[3];
-                let sTime = parts[4];
-
-                days[date] = {marekGif: mGif, marekTime: mTime, sedlakGif: sGif, sedlakTime: sTime}
-            }
-  });
 }

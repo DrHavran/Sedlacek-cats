@@ -5,15 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CATS</title>
     <link rel="stylesheet" href="cats.css">
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/025/245/247/small_2x/cat-clipart-icon-flat-design-on-transparent-background-animal-isolated-clipping-path-element-png.png">
     <script src="cats.js"></script> 
 </head>
-<body>
-    <div>
-        <img id="marekGif" height="300px" width="200px">
+<body id="body">
+    <div class="middle">
+        <div class="side">
+            <h2>Marek</h2>
+            <img id="marekGif" height="500px" width="400px" style="margin: 50px;">
+            <p id="marekTime"></p>
+        </div>
+        <div>
+            <div id="date">
+                <button onclick="left()" style="border: 0px;"><img src="https://www.clker.com/cliparts/V/X/O/e/8/1/transparent-arrow.svg.hi.png" class="rotate arrow" width="100px" height="50px"></button>
+                <p id="currentDate"></p>
+                <button onclick="right()" style="border: 0px;"><img src="https://www.clker.com/cliparts/V/X/O/e/8/1/transparent-arrow.svg.hi.png" class="arrow" width="100px" height="50px"></button>
+            </div>
+            <div class="days">
+                <p>Po</p>
+                <p>Út</p>
+                <p>St</p>
+                <p>Čt</p>
+                <p>Pá</p>
+                <p>So</p>
+                <p style="color: red;">Ne</p>
+            </div>
+            <div id="calendar"></div>
+        </div>
+        <div class="side">
+            <h2>Sedlák</h2>
+            <img id="sedlakGif" height="500px" width="400px" style="margin: 50px;">
+            <p id="sedlakTime"></p>
+        </div>
     </div>
-    <div id="calendar"></div>
-    <div>
-        <img id="sedlakGif" height="300px" width="200px">
+    <div class="side">
+        <p id="currentStreak"></p>
+        <p id="longestStreak"></p>
     </div>
 </body>
 </html>
