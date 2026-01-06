@@ -63,6 +63,14 @@ button{
     background-color: rgb(243, 211, 163);
 }
 
+.hasData{
+    background-color: yellowgreen;
+}
+
+.hasData:hover{
+    background-color: rgb(109, 145, 36);
+}
+
 .emptyDay{
     height: 132px;
     width: 102px;

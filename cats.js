@@ -12,7 +12,6 @@ window.onload = function () {
     let sedlakTime = document.getElementById("sedlakTime")
     loadFile();
     currentDate.innerHTML = getMonthName(month) + " " + year
-    loadCalendar();
 };
 
 
@@ -92,6 +91,7 @@ function loadFile(){
             }
             currentText.innerHTML = "Current streak: " + currentStreak;
             longestText.innerHTML = "Longest streak: " + longestStreak;
+            loadCalendar();
   });
 }
 
@@ -110,10 +110,17 @@ function loadCalendar(){
 
     for(let i = 1; i <= new Date(year, month, 0).getDate(); i++){
         let div = document.createElement("div")
+        let day = i+"."+month+"."+year
         div.className = "day"
 
+        if(days.hasOwnProperty(day)){
+            if(days[day].marekTime != "" && days[day].sedlakTime != ""){
+                div.classList.add("hasData");
+            }
+        }
+
         div.addEventListener("click", function(){
-            let day = i+"."+month+"."+year
+            day = i+"."+month+"."+year
 
             marekGif.src = ""
             sedlakGif.src = ""
