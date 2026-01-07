@@ -32,4 +32,5 @@
 3.1.2026 https://media1.tenor.com/m/4YocmNOTmYEAAAAd/kitty-kitten.webp 10:15 https://media1.tenor.com/m/4IVPfGZpdHoAAAAd/im-coming-on-the-way.webp 10:17;
 4.1.2026 https://media1.tenor.com/m/cfcyqxUnHk4AAAAd/prisoner-cat.webp 9:58 https://media1.tenor.com/m/Wx3bGh80AWkAAAAd/siren-cat.webp 9:59;
 5.1.2026 https://media1.tenor.com/m/nYzAGzz-z0sAAAAd/cat.webp 0:51 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/5.1.2026%20S.gif 8:16;
-6.1.2026 https://media1.tenor.com/m/xxqhGQmulVsAAAAd/trollface.webp 0:16 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/6.1.2026%20S.gif 0:26
+6.1.2026 https://media1.tenor.com/m/xxqhGQmulVsAAAAd/trollface.webp 0:16 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/6.1.2026%20S.gif 0:26;
+7.1.2026 https://media1.tenor.com/m/qcZZ6Hvp18wAAAAd/black-pussy-ca.webp 1:16 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/7.1.2026%20S.gif 9:32
