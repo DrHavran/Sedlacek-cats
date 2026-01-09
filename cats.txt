@@ -33,4 +33,6 @@
 4.1.2026 https://media1.tenor.com/m/cfcyqxUnHk4AAAAd/prisoner-cat.webp 9:58 https://media1.tenor.com/m/Wx3bGh80AWkAAAAd/siren-cat.webp 9:59;
 5.1.2026 https://media1.tenor.com/m/nYzAGzz-z0sAAAAd/cat.webp 0:51 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/5.1.2026%20S.gif 8:16;
 6.1.2026 https://media1.tenor.com/m/xxqhGQmulVsAAAAd/trollface.webp 0:16 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/6.1.2026%20S.gif 0:26;
-7.1.2026 https://media1.tenor.com/m/qcZZ6Hvp18wAAAAd/black-pussy-ca.webp 1:16 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/7.1.2026%20S.gif 9:32
+7.1.2026 https://media1.tenor.com/m/qcZZ6Hvp18wAAAAd/black-pussy-ca.webp 1:16 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/7.1.2026%20S.gif 9:32;
+8.1.2026 https://media1.tenor.com/m/c3Gl06myCnAAAAAd/bunny-rabbit.webp 0:00 https://media1.tenor.com/m/iVwztfP6EX4AAAAd/cute-funny-cat.webp 9:28;
+9.1.2026 https://media1.tenor.com/m/9r8soJC__mgAAAAd/hat-cat-spin-cat.webp 0:22 https://raw.githubusercontent.com/DrHavran/Sedlacek-cats/refs/heads/main/silly%20gifs/9.1.2026%20S.gif 8:40
